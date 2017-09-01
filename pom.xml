@@ -45,13 +45,13 @@ THE SOFTWARE.
   <name>Stapler override plugin</name>
 
   <!-- version == stapler version plugin installs on jenkins -->
-  <version>1.252-SNAPSHOT</version>
+  <version>1.252</version>
   <dependencies>
 
     <dependency>
       <groupId> org.kohsuke.stapler</groupId>
       <artifactId>stapler</artifactId>
-      <version>1.252</version>
+      <version>${version}</version>
       <exclusions>
         <!-- create UpperBound conflicts -->
         <exclusion>
