@@ -53,6 +53,7 @@ THE SOFTWARE.
       <artifactId>stapler</artifactId>
       <version>1.252</version>
       <exclusions>
+        <!-- create UpperBound conflicts -->
         <exclusion>
           <groupId>commons-beanutils</groupId>
           <artifactId>commons-beanutils</artifactId>
@@ -166,9 +167,7 @@ THE SOFTWARE.
             <configuration>
               <outputFile>${project.build.directory}/${project.build.finalName}/META-INF/dependencies.txt</outputFile>
               <includeScope>runtime</includeScope>
-
-              <!-- unless explicitly exluded, this optional dependency from parent POM ends up showing up in dependencies.txt -->
-              <excludeArtifactIds>jsr305,commons-lang,ezmorph,tiger-types,asm5,guava,commons-collections,commons-discovery,javax.annotation-api</excludeArtifactIds>
+              <includeGroupIds>org.kohsuke.stapler</includeGroupIds>
             </configuration>
           </execution>
         </executions>
